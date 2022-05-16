@@ -1,0 +1,19 @@
+
+<table class="table table-bordered  text-center">
+    <tr class="bg-primary ">
+      <td>Id</td>
+      <td>Name</td>
+      <td>Salary</td>
+      <td>City</td>
+      <td>Dob</td>
+    </tr>
+    <tr *ngFor="let user of users" >
+    <td> <a [routerLink]="['/user', user.id]">{{user.id}}</a></td>
+    <td>{{user.name | titlecase}}</td>
+    <td>{{user.salary | currency:"AUD"}}</td>
+    <td>{{user.city | titlecase}}</td>
+    <td>{{user.dob | age}}</td>
+  
+  </tr>
+  </table>
+ 
