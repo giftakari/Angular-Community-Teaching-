@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <h1>Registration form</h1>
+  <form
+    action="
+    "
+  >
+    <div class="form-group">
+      <label for="">Username</label>
+      <input type="text" name="" id="" class="form-control" />
+    </div>
+  </form>
+</div>
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.id }}-- {{ user.city }} --{{ user.salary }}
+  </li>
+</ul>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <td>User Name</td>
+      <td>User Id</td>
+      <td>User Email</td>
+      <td>User username</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of jsonUsers">
+      <td>{{ user.name }}</td>
+      <td>{{ user.id }}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.username}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre>
+    {{ jsonUsers | json }}
+</pre>

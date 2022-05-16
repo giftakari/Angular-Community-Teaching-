@@ -1,0 +1,42 @@
+<h3 class="text-cener">Welcome home {{ id }}</h3>
+<button type="button" class="btn btn-primary">
+  <a routerLink="/user" style="color: aliceblue">Back to users</a>
+</button>
+
+<table class="table table-bordered text-center">
+  <thead>
+    <tr>
+      <th>User Id</th>
+      <th>User name</th>
+      <th>user email</th>
+      <th>User Phone details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let singleUser of user">
+      <th>{{ singleUser.id }}</th>
+      <th>{{ singleUser.name }}</th>
+      <th>{{ singleUser.email }}</th>
+      <th>{{ singleUser.phone }}</th>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+
+  <ul class="nav nav-tabs">
+
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" routerLink="address"
+      >address</a
+    >
+    </li>
+  <li class="navbar-item">
+    <a class="nav-link" routerLink="company">company</a>
+  </li>
+  
+  </ul>
+
+  <router-outlet></router-outlet>
+</div>
+  
